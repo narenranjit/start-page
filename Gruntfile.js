@@ -29,7 +29,28 @@ module.exports = function(grunt) {
             dev: {
                 entry: './src/scripts/app.js',
                 compile: './public/scripts/app.js',
-                debug: true
+                debug: true,
+                options: {
+                    expose: {
+                      files: [
+                            {
+                                cwd: 'src/scripts/views/',
+                                src: ['**/*.js'],
+                                dest: 'views/'
+                            },
+                            {
+                                cwd: 'src/scripts/models/',
+                                src: ['**/*.js'],
+                                dest: 'models/'
+                            },
+                            {
+                                cwd: 'src/scripts/collections/',
+                                src: ['**/*.js'],
+                                dest: 'collections/'
+                            }
+                        ]
+                    }
+                }
             }
         },
 
