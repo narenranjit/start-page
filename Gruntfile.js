@@ -6,6 +6,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-jst');
     grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-browserify2');
+    grunt.loadNpmTasks('grunt-browserify2');
 
     grunt.initConfig({
         watch: {
@@ -16,6 +18,18 @@ module.exports = function(grunt) {
             jst: {
                 files: ['src/templates/**/*.tmpl'],
                 tasks: ['jst']
+            },
+            js: {
+                files: ['src/scripts/**/*.js'],
+                tasks: 'browserify2'
+            }
+        },
+
+        browserify2: {
+            dev: {
+                entry: './src/scripts/app.js',
+                compile: './public/scripts/app.js',
+                debug: true
             }
         },
 

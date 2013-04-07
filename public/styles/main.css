@@ -1,4 +1,4 @@
-/* line 9, ../../src/styles/main.scss */
+/* line 7, ../../src/styles/main.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -13,7 +13,7 @@
   clear: both;
 }
 
-/* line 13, ../../src/styles/main.scss */
+/* line 11, ../../src/styles/main.scss */
 .hide-text {
   font: 0/0 a;
   color: transparent;
@@ -22,7 +22,7 @@
   border: 0;
 }
 
-/* line 17, ../../src/styles/main.scss */
+/* line 15, ../../src/styles/main.scss */
 .input-block-level {
   display: block;
   width: 100%;
